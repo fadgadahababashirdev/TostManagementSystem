@@ -1,0 +1,124 @@
+
+        body{
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1{
+            color: rgb(10, 122, 220);
+            font-weight: bolder;
+            opacity: 0.5;
+        }
+        a{
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: bolder;
+            padding-left: 10px;
+            
+        }
+
+        a:hover{
+            color: rgb(244, 21, 21);
+            font-weight: bolder;
+            font-size: 33px;
+
+            font-family: verdana;
+        }
+        .coloured{
+            color: rgb(255, 153, 0);
+            opacity: 6;
+            font-size: 43px;
+        }
+
+        .colo{
+            color: aliceblue;
+            font-size: 33px;
+            font-weight: bolder;
+        }
+
+        p{
+            color: rgb(199, 216, 232);
+            font-size: 20px;
+        }
+
+        .le{
+            font-size: 23px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(4, 255, 45);
+            opacity:0.5px;
+        }
+
+
+
+
+        /*check course page css*/
+
+
+        .co{
+            height: 330px;
+            width: 46px;
+         
+
+            margin-top: 70px;
+        }
+
+        img{
+            height: 330px;
+            width: 46px;
+         
+
+           
+        }
+
+        .nmb{
+            height: 40px;
+            width: 43px;
+            background-color: rgb(66, 72, 101);
+            border-radius:  0 0 4px 4px;
+            text-align: center;
+            font-size: 30px;
+            color: orange;
+            
+
+        }
+        .course{
+            color: rgb(210, 176, 113);
+            font-size: 32px;
+
+
+        }
+
+        .divbody{
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+
+        @media(max-width:576px){
+            .ca{
+                display: block;
+                text-align: center;
+                
+              
+            }
+        }
+
+
+        @media(max-width:576px){
+            .col{
+                width: 100%;
+               
+            }
+            
+        }
+        
+        @media(max-width:576px){
+            .di{
+                display: inline-block;
+               
+            }
+            
+        }
