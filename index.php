@@ -32,7 +32,7 @@
             <div class="col-sm-7  text-dark ">
               <center> 
                 <div class="py-5 le">Click button below to find out course preview</div>
-                <div><button class="btn btn-outline-primary"><a href="checkcourse.php">Tost Academy Coarses</a></button></div>
+                <div><button class="btn btn-outline-primary"><a href="checkcourse.php"class="heavy">Tost Academy Coarses</a></button></div>
             </center> 
             </div>
         </div>
