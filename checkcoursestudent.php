@@ -11,7 +11,7 @@
     <div class="nav fixed-top P-5">
         <div class="container">
             <div class="row">
-             <div class="col"><div class="div"><h1 class="text-primary">Tost Training Academy</h1></div></div>   
+             <div class="col"><div class="div"><a href="index.php"class="text-white">Tost Training Academy</a></div></div>   
                <div class="col-sm-4"> <div class="div p-3"><a href="studentlogout.php">LOGOUT</a></div></div>
             </div>
         </div>    

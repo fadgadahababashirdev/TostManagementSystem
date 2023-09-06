@@ -12,7 +12,7 @@
     <div class="nav fixed-top">
         <div class="container">
             <div class="row">
-             <div class="col"><div class="div"><h1 class="text-primary">Tost Training Academy</h1></div></div>   
+             <div class="col"><div class="div"><a href="index.php"class="text-white">Tost Training Academy</a></div></div>   
                <div class="col-sm-4"> <div class="div p-3"><a href="Adminlogin.php"class="">LOGIN/</a><a href="Adminregister.php">SIGN UP</a></div></div>
             </div>
         </div>    
@@ -32,9 +32,18 @@
             <div class="col-sm-7  text-dark ">
               <center> 
                 <div class="py-5 le">Click button below to find out course preview</div>
-                <div><button class="btn btn-outline-primary"><a href="checkcourse.php"class="heavy">Tost Academy Coarses</a></button></div>
+                <div><button class="btn btn-outline-primary"><a href="checkcourse.php"class="heavy">Tost Academy Coarse</a></button></div>
             </center> 
             </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ">
+        <center><div class="divi p-4 text-white">Contact us</div></center>
+        <div class="kapo">
+            <div class="halla bg-secondary d-block p-3"><h1 class="hal text-white mx-2"style="margin-left:0;font-size:32px;">Call us today</h1><div class="mx-5">0788232323</div></div>
+            <div class="halla  bg-secondary d-block p-3"><span  class="hal">Our emails</span><div class="text-dark mx-3">info@tostgroup.com</div></div>
+            <div class="halla  bg-secondary d-block p-3"><span  class="hal mx-5">our addresses</span><div class="div text-dark mx-3">Princehouse building</div></div>
         </div>
     </div>
   

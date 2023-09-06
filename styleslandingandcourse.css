@@ -123,4 +123,55 @@
             
         }
 
-       
+       .halla{
+        width: 300px;
+        height: 120px;
+        color: white;
+        font-size: 23px;
+        font-weight: bolder;
+        border-radius: 12px;
+        
+       }
+
+    .hal{
+        margin-top: 12px;
+
+        margin-left:73px;
+
+    }
+
+    .divi{
+        font-weight: bolder;
+        font-size: 34px;
+    }
+
+    .kapo{
+        display:flex;
+        justify-content: space-evenly;
+
+   
+        
+    }
+
+    @media(max-width:576px){
+        .kapo{
+            display:block;
+            margin-top: 12px;
+          
+          
+        }
+
+    }
+
+    
+    @media(max-width:576px){
+        .halla{
+            
+            margin-top: 12px;
+            justify-content: space-around;
+            margin-left: 100px;
+          
+          
+        }
+        
+    }

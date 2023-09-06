@@ -37,7 +37,7 @@ $con=mysqli_connect("localhost","root","","mypro") or die("echo not connected");
         <div class="container">
             <div class="row">
              <div class="col"><div class="div"><h1 class="text-primary">Tost Training Academy</h1></div></div>   
-               <div class="col-sm-4"> <div class="div p-3"><a href="adminlogin.php"class="">LOGIN/<a href="studentregister.php">Student</a>/<a href="trainerregister.php">Trainer</a><br> <a href="landing page.php">Home</a></div></div>
+               <div class="col-sm-4"> <div class="div p-3"><a href="adminlogin.php"class="">LOGIN/</a>
             </div>
         </div>    
 
@@ -48,7 +48,7 @@ $con=mysqli_connect("localhost","root","","mypro") or die("echo not connected");
 
 
     <form action="#"method="POST" class="fami">
-        <legend class="text-white">Admin Register</legend>
+        <legend class="text-white">Register</legend>
         <input type="hidden"name="aid">
      
            

@@ -1,6 +1,9 @@
 <?php
 $con=mysqli_connect("localhost","root","","mypro") or die("echo not connected");
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +32,8 @@ $con=mysqli_connect("localhost","root","","mypro") or die("echo not connected");
     <div class="nav fixed-top">
         <div class="container">
             <div class="row">
-             <div class="col"><div class="div"><h1 class="text-primary">Tost Training Academy</h1></div></div>   
-               <div class="col-sm-4"> <div class="div p-3"><a href="adminregister.php">Register</a><a href="studentregister.php">Student</a>/<a href="trainerregister.php">Trainer</a> <a href="#"></a></div></div>
+             <div class="col"><div class="div"><a href="index.php"class="text-white">Tost Training Academy</a></div></div>   
+           
             </div>
         </div>    
 
@@ -40,32 +43,38 @@ $con=mysqli_connect("localhost","root","","mypro") or die("echo not connected");
     <!--second section-->>
 
 
-    <form action="checkloginadmin.php"method="POST" class="fami">
-        <legend class="text-white">Admin Login</legend>
-     
+    <form action="checkloginadmin.php"method="post"class="border shadow rounded p-3 bg-white"style="width:450px;height:440px;">
+        <h1 class="text-center">Login</h1>
+
+       
            
-            <div>
-                <div><label for="name" class="text-primary">Name</label></div>
-                <div><input type="text"name="name"placeholder="Enter your name" class="form-control"></div>
-            </div>
-
-           
-
-          
-            <div>
-                <div><label for="password"class="text-primary">Password</label></div>
-                <div><input type="password"name="password"placeholder="Enter Password" class="form-control"></div>
-            </div>
-
-            <div>
-                
-                <button class="btn- btn-success form-control text-center text-white ki my-3" type="submit">Login</button>
-            </div>
-
-            <div><a href="text-danger text-lg text-center">Forgot password?</a></div>
 
         
-    </form>
+            <div>
+                <label for="email"class="form-label">Email <input type="text"name="email"id="username"placeholder="email"class="form-control" style="width:420px;"></label>
+            </div>
+            
+            <div>
+                <label for="password"class="form-label">password <input type="password"name="password"id="password"placeholder="password"class="form-control"style="width:420px;></label>
+            </div>
+
+            <div>
+               <label for="user type" class="form-label"><!--Login As--></label
+               <select type="hidden"name="role" id="user type"class="form-select mb-2" >
+               <!-- <option  selected value="Student">Student</option>
+                <option value="Admin">Admin</option>
+                <option value="trainer">Trainer</option>-->
+               </select>
+               
+            </div>
+
+            <div class="d-flex justify-content-between">
+                        <div><button type="submit"name="save"class="btn-md btn-primary rounded">Login</button></div>
+                        <div><a href="adminregister.php">Register</a></div>
+            </div>
+            
+        </form>
+
   
     
 
