@@ -1,8 +1,8 @@
+
 <?php
-$con=mysqli_connect("localhost","root","","mypro");
+    $con=mysqli_connect("localhost","root","","mypro");
 
-?>
-
+    ?>
 <?php
 $sel="SELECT *from admin";
 $runsel=mysqli_query($con,$sel);
@@ -51,24 +51,24 @@ $fetch=mysqli_fetch_assoc($runsel);
     <h2><a href="dashboard.php">Tost training academy</a></h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Admin activities</a></li>
-        <li><a href="registerstudentbyadmin.php">Register Student</a></li>
-        <li><a href="registercoursebyadmin.php">Register Course</a></li>
-        <li><a href="registertrainerbyadmin.php">Register Trainer</a></li>
+        <li><a href="registerstudentbyadmin.php">Add Student</a></li>
+        <li><a href="registercoursebyadmin.php">Add Course</a></li>
+        <li><a href="registertrainerbyadmin.php">Add Trainer</a></li>
         <li><a href="select.php">operations</a></li>
       </ul><br>
     </div>
     <br>
     
     <div class="col-sm-9">
-    <div class=" hallo">
+    <div class=" hallo bg-primary">
         <div><h1 style="font-size:22px;color:black;margin-top:0;padding-top:0; margin-left:23px;"><?php echo $fetch['name'];?></h1></div>
         <div><a href="logout.php" style="margin-right:23px;color:red;">Logout</a></div>
        
       </div>
       <div class="col-sm-5  shadow border rounded "style="margin-left:30px;margin-top:0px;">
                         
-      <form action="#"method="POST"style="margin-left:12px;margin-top:2px;">
-                                        <legend class="text-primary">Course Register</legend>
+      <form action="#"method="POST"style="margin-left:12px;margin-top:2px;"enctype="multipart/form-data">
+                                        <legend class="text-primary">Add course</legend>
                                         <input type="hidden"name="cid">
                         
                             
@@ -76,6 +76,19 @@ $fetch=mysqli_fetch_assoc($runsel);
                                     <div><label for="name" class="text-primary"> Course Name</label></div>
                                     <div><input type="text"name="cname"placeholder="Course name" class="form-control"required></div>
                                 </div>
+
+                                <div>
+                                    <div><label for="name" class="text-primary">Course description</label></div>
+                                    <div><textarea name="coursedescription"placeholder="Course description" class="form-control"required></textarea></div>
+                                </div>
+
+
+                                <div>
+                                    <div><label for="name" class="text-primary">Add course</label></div>
+                                    <div class="form-group"><input type="file" name="coursefile"placeholder="Add a file" class="form-control"required></div>
+                                </div>
+
+                                
 
 
                                 <div>
@@ -99,18 +112,31 @@ $fetch=mysqli_fetch_assoc($runsel);
 if(isset($_POST['save'])){
     $cid=$_POST['cid'];
     $cname=$_POST['cname'];
-  
+    $description=$_POST['coursedecription'];
+
+
+    //image file pickup from form codes
+
+    $filename=$_FILES["coursefile"]["name"];
+    $tempname=$_FILES["coursefile"]["tmp_name"];
+
+    $folder="./images/".$filename;
+
+    //inserting into db
+    $ins=mysqli_query($con,"INSERT INTO course(cid,cname,coursedescription,coursefile) VALUES('$cid','$cname','$description','$filename')");
+
+    
    
-
-    $ins=mysqli_query($con,"INSERT INTO course(cid,cname) VALUES('$cid','$cname')");
-
-    if($ins){
+   //checking if file has been inserted or not
+    if($ins && move_uploaded_file($tempname,$folder)){
         echo "<script>alert('registered successfuly')</script>";
     }
     else{
         echo "register denied";
     }
-}
+
+  }
+
 ?>  
       
     

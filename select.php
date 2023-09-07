@@ -63,7 +63,7 @@ $fetch=mysqli_fetch_assoc($runsel);
         <div><a href="logout.php" style="margin-right:23px;color:red;">Logout</a></div>
        
       </div>
-      <div class="contaiener">
+      <div>
 
   <?php
     $select="SELECT *FROM admin";
@@ -71,7 +71,7 @@ $fetch=mysqli_fetch_assoc($runsel);
     
     ?>
 
-    <table class="table mt-5">
+    <table class="table mt-5" style="margin-top:23px;">
         
         <thead>
         

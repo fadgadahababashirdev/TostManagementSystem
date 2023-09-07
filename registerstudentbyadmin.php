@@ -56,7 +56,7 @@ $fetch=mysqli_fetch_assoc($runsel);
     <br>
     
     <div class="col-sm-9">
-    <div class=" hallo">
+    <div class=" hallo bg-primary">
         <div><h1 style="font-size:22px;color:black;margin-top:0;padding-top:0; margin-left:23px;"><?php echo $fetch['name'];?></h1></div>
         <div><a href="logout.php" style="margin-right:23px;color:red;">Logout</a></div>
        
