@@ -1,6 +1,7 @@
 <?php
 session_start();
 session_destroy();
-include("adminlogin.php");
+header("location:loginform.php");
 
 ?>
+

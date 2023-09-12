@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
              <div class="col"><div class="div"><a href="index.php"class="text-white">Tost Training Academy</a></div></div>   
-               <div class="col-sm-4"> <div class="div p-3"><a href="Adminlogin.php"class="">LOGIN/</a><a href="Adminregister.php">SIGN UP</a></div></div>
+               <div class="col-sm-4"> <div class="div p-3"><a href="loginform.php"class="">LOGIN/</a><a href="Adminregister.php">SIGN UP</a></div></div>
             </div>
         </div>    
 
@@ -32,7 +32,7 @@
             <div class="col-sm-7  text-dark ">
               <center> 
                 <div class="py-5 le">Click button below to find out course preview</div>
-                <div><button class="btn btn-outline-primary"><a href="checkcourse.php"class="heavy">Tost Academy Coarse</a></button></div>
+                <div><button class="btn btn-outline-primary"><a href="checkcourse.php"class="heavy">Tost Academy Course</a></button></div>
             </center> 
             </div>
         </div>

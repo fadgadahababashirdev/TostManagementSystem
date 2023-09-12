@@ -84,8 +84,13 @@ $fetch=mysqli_fetch_assoc($runsel);
 
 
                                 <div>
-                                    <div><label for="name" class="text-primary">Add course</label></div>
+                                    <div><label for="name" class="text-primary">Add course image</label></div>
                                     <div class="form-group"><input type="file" name="coursefile"placeholder="Add a file" class="form-control"required></div>
+                                </div>
+
+                                <div>
+                                    <div><label for="name" class="text-primary">Add course pdf file</label></div>
+                                    <div class="form-group"><input type="file" name="coursepdffile"placeholder="Add a PDF file" class="form-control"required></div>
                                 </div>
 
                                 
@@ -112,23 +117,30 @@ $fetch=mysqli_fetch_assoc($runsel);
 if(isset($_POST['save'])){
     $cid=$_POST['cid'];
     $cname=$_POST['cname'];
-    $description=$_POST['coursedecription'];
+    $description=$_POST['coursedescription'];
 
 
-    //image file pickup from form codes
+    //image file to database 
 
     $filename=$_FILES["coursefile"]["name"];
     $tempname=$_FILES["coursefile"]["tmp_name"];
 
     $folder="./images/".$filename;
 
+    //coursefile image upload
+
+    $file=$_FILES["coursepdffile"]["name"];
+    $tem=$_FILES["coursepdffile"]["tmp_name"];
+
+    $folderfile="./file/".$file;
+
     //inserting into db
-    $ins=mysqli_query($con,"INSERT INTO course(cid,cname,coursedescription,coursefile) VALUES('$cid','$cname','$description','$filename')");
+    $ins=mysqli_query($con,"INSERT INTO course(cid,cname,coursedescription,coursefile,coursepdffile) VALUES('$cid','$cname','$description','$filename','$file')");
 
     
    
    //checking if file has been inserted or not
-    if($ins && move_uploaded_file($tempname,$folder)){
+    if($ins && move_uploaded_file($tempname,$folder) && move_uploaded_file($tem,$folderfile)){
         echo "<script>alert('registered successfuly')</script>";
     }
     else{

@@ -1,7 +1,4 @@
-<?php
-$con=mysqli_connect("localhost","root","","mypro");
 
-?>
 
 <?php
 $sel="SELECT *from admin";
