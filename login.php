@@ -1,40 +1,55 @@
-
-
 <?php
 session_start();
-$con=mysqli_connect("localhost","root","","mypro") or die("not connected");
+include_once("connectpage.php");
 
-
-// getting data from the form
+//fetch data from form
 
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-$sel=mysqli_Query($con,"SELECT *FROM admin WHERE email='$email'");
 
-$fetch=mysqli_fetch_array($sel);
+$select=mysqli_query($con,"SELECT *FROM  users WHERE email='$email' and password='$password'");
 
-if($fetch){
-    $_SESSION['email']=$fetch['email'];
-    $_SESSION['password']=$fetch['password'];
-    $_SESSION['role']=$fetch['role'];
 
-    if($_SESSION['email']==$email and  $_SESSION['password']==$password){
-        if($_SESSION['role']==='Admin')
-        {
-            include("dashboard.php");
+$row=mysqli_num_rows($select);
+if($row==1){
+    $fetch=mysqli_fetch_array($select);
+    //data from db
+  
+       
+        $_SESSION['role']=$fetch['role'];
+        
+    
+        
+            if($_SESSION['role']==='Admin'){
+                $_SESSION['SessionEmail']=$email;
+                include('admindashboard.php');
+            }
+            elseif ($_SESSION['role']==='student') {
+                $_SESSION['SessionEmail']=$email;
 
-        }
+                include("studentdashboar.php");
+            }
+    
+            elseif($_SESSION['role']==='Trainer'){
+                $_SESSION['SessionEmail']=$email;
 
-        elseif($_SESSION['role']==='Student')
-        {
-            include("checkcourse.php");
-
-        }
-      
+                include("location:Trainerdashboard.php");
+            }
+        
     }
-}
-else{
-    echo "invalid username or password";
-}
+
    
+    
+
+else{
+    echo "denied";
+}
+
+
+
+/*
+
+
+*/?>
+

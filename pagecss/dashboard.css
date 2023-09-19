@@ -1,0 +1,45 @@
+.colu{
+    background-color:rgb(85, 187, 255);
+    display:flex;
+    justify-content:space-around;
+  }
+
+  .content{
+    margin-top:12px;
+    margin-right:120px;
+  }
+  .content2{
+    margin-top:12px;
+
+  }
+
+  .one{
+    margin-top:23px;
+   
+   
+  }
+
+
+  form{
+   
+    background-color: azure;
+    width:230px;
+    padding:12px;
+
+  }
+
+  img{
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+  }
+
+  .tex{
+    font-size:23px;
+    font-weight:bolder;
+  }
+
+  
+
+
+  

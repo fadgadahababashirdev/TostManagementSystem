@@ -1,14 +1,15 @@
 <?php
-$con=mysqli_connect("localhost","root","","mypro")or die("not connected");
+include_once("connectpage.php");
 
-$del=$_GET['dee'];
-$rund=mysqli_query($con,"DELETE FROM admin WHERE aid='$del'");
+$delete=$_GET['delete'];
+$deletefromtb="DELETE FROM users where courseid='$delete'";
+$rundelete=mysqli_query($con,$deletefromtb);
 
-if($rund){
-    header("location:select.php");
+if($rundelete){
+    header("location:ReadUsers.php");
 }
 else{
-    echo "<script>alert('not deleted')</script>";
+    echo "not deleted";
 }
 
 ?>

@@ -16,15 +16,8 @@
             font-size: 23px;
             font-weight: bolder;
             padding-left: 10px;
+           
             
-        }
-
-        a:hover{
-            color: rgb(238, 227, 227);
-            font-weight: bolder;
-            font-size: 33px;
-
-            font-family: verdana;
         }
         .coloured{
             color: rgb(255, 153, 0);
