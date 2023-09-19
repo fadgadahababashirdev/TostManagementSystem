@@ -29,20 +29,7 @@
 </head>
 <body>
 
-<?php
-
-
-include_once("connectpage.php");
-
-
-$emaill=$_SESSION['SessionEmail'];
-
-
-$sel="SELECT * FROM users where email='$emaill'";
-$runselect=mysqli_query($con,$sel);
-
-$fetch=mysqli_fetch_array($runselect);
-?>
+e
 
 
 
