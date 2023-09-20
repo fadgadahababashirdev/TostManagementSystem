@@ -30,8 +30,12 @@
 <body>
     <?php
     include_once("connectpage.php");
-    $sel="SELECT *FROM users";
+
+    
+   
+    $sel="SELECT * FROM users";
     $runsel=mysqli_query($con,$sel);
+    $fetch=mysqli_fetch_array($runsel);
 
     
     ?>
@@ -54,11 +58,11 @@
     
     <div class="col-sm-9">
       <div class="colu">
-        <div ><h4>Userimage</h4></div>
+        <div ><h4><img src="UserImages/<?php echo $fetch['userimage'];?>" alt=""></h4></div>
        
-        <div class="content"> <p>Some text..</p></div>
+        <div class="content"> <p><?php echo $fetch['username'];?></p></div>
 
-        <div class="content2"> <p>Some text..</p></div>
+        <div class="content2"> <p><a href="logout.php">Logout</a></p></div>
       </div>
 
 

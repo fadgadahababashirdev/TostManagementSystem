@@ -42,7 +42,10 @@ $fetch=mysqli_fetch_array($runselect);
 
  //joining tables
 
-$select="SELECT course.cname FROM `course` INNER JOIN `users` ON course.cid=users.courseid";
+
+ $id=$fetch['courseid'];
+
+$select="SELECT course.cname FROM `course` where course.cid=$id";
 
 
 $runsel=mysqli_query($con,$select);
