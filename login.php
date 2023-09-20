@@ -43,7 +43,8 @@ if($row==1){
     
 
 else{
-    echo "denied";
+    echo "<script>alert('invalid username or password');</script>";
+    echo "<script>window.location.assign('index.php')</script>";
 }
 
 

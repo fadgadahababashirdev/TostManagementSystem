@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-include("landingpage.php");
+include("index.php");
 ?>

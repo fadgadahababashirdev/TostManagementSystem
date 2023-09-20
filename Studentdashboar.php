@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +30,24 @@
 </head>
 <body>
 
+<?php
+include_once("connectpage.php");
 
 
+$user=$_SESSION['SessionEmail'];
+$sel="SELECT *FROM users where email='$user'";
+$runselect=mysqli_query($con,$sel);
+
+$fetch=mysqli_fetch_array($runselect);
+
+ //joining tables
+
+$select="SELECT course.cname FROM `course` INNER JOIN `users` ON course.cid=users.courseid";
+
+
+$runsel=mysqli_query($con,$select);
+$fetchrunsel=mysqli_fetch_array($runsel);
+?>
 
 
 
@@ -47,7 +62,7 @@
       <div class="colu">
           <div ><img src="UserImages/<?php echo $fetch['userimage'];?>" alt=""></div>
        
-          <div class="content"> <p>username</p></div>
+          <div class="content"> <p><?php echo $fetch['username'];?></p></div>
 
         <div class="content2"> <a href="logout.php">LOGOUT</a></div>
       </div>
@@ -56,7 +71,7 @@
 
       <div class="row one">
 
-      <h1>Dear welcome at tost you will be learning!</h1>
+      <h1>Dear <span class="text-primary"><?php echo $fetch['username'];?></span> welcome at tost you will be learning  <span class="text-danger"><?php echo $fetchrunsel['cname'];?></span>!</h1>
 
 
       </div>

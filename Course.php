@@ -27,7 +27,7 @@
             <nav class="navbar navbar-expand-sm bg-danger  p-2 fixed-top">
                     <div class="nav-header text-white px-4">Tost Training Academy</div>
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="landingpage.php" class="nav-link text-lg text-dark active">Home</a></li>
+                        <li class="nav-item"><a href="index.php" class="nav-link text-lg text-dark active">Home</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">About</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">Contact</a></li>
                        
