@@ -16,7 +16,7 @@
                     <div class="nav-header text-white px-4">Tost Training Academy</div>
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="index.php" class="nav-link text-lg text-dark active">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">About</a></li>
+                        <li class="nav-item"><a href="About.php" class="nav-link text-lg text-dark">About</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">Contact</a></li>
                         <li class="nav-item"><a href="Course.php" class="nav-link text-lg text-dark">Course</a></li>
                     </ul>
@@ -78,7 +78,13 @@
                             <div class="p-2">
                                 <div class="text-start"><label for="userimage">Courseid</label></div>
                                 
-                                <div><input type="text" name="courseid" id="userimage" class="form-control"required placeholder="Please check course page to enter a valid course id"></div>
+                                <div>
+                                    <select name="courseid" id="" class="form-select">
+                                        <option value="1">Html</option>
+                                        <option value="2">Bootstrap</option>
+                                        <option value="3">Php</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="p-2">

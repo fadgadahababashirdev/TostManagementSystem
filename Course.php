@@ -28,7 +28,7 @@
                     <div class="nav-header text-white px-4">Tost Training Academy</div>
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="index.php" class="nav-link text-lg text-dark active">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">About</a></li>
+                        <li class="nav-item"><a href="About.php" class="nav-link text-lg text-dark">About</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">Contact</a></li>
                         <li class="nav-item"><a href="course.php" class="nav-link text-lg text-dark">Course</a></li>
                        
@@ -50,7 +50,7 @@
                     <div class="d-flex justify-content-around"><p style="color: rgb(244, 12, 116);"><?php echo $row['cname'];?></p><p>course id:<?php echo $row['cid'];?></p></div>
                     <div><img src="CourseImage/<?php echo $row['courseimage'];?>" alt="image not found"></div>
                     <div ><p><?php echo $row['cdescription']?></p></div>
-                    <div class="text-start" style="margin-left:42px;"><a href="readfile.php ? pdffile=<?php echo $row['cid'];?>">file</a></div>
+                    <div class="text-start" style="margin-left:42px;"><a href="readfile.php ? pdffile=<?php echo $row['cid'];?>">Download course</a></div>
            </div>
            <?php
                  }
