@@ -15,7 +15,7 @@
             <nav class="navbar navbar-expand-sm bg-danger  p-2 fixed-top">
                     <div class="nav-header text-white px-4">Tost Training Academy</div>
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="landingpage.php" class="nav-link text-lg text-dark active">Home</a></li>
+                        <li class="nav-item"><a href="index.php" class="nav-link text-lg text-dark active">Home</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">About</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-lg text-dark">Contact</a></li>
                         <li class="nav-item"><a href="Course.php" class="nav-link text-lg text-dark">Course</a></li>
@@ -48,7 +48,7 @@
                                 <div class="d-flex justify-content-around">
                              
                                     <div>  <h4 class="mt-3 text-start ">ADD ACCOUNT</h4></div>
-                                    <div class="mt-3"><a href="landingpage.php ">LOGIN</a></div>
+                                    <div class="mt-3"><a href="index.php ">LOGIN</a></div>
                                 </div>
                                 <hr>
 
@@ -60,29 +60,30 @@
 
                             <div class="p-2">
                                 <div class="text-start"><label for="username">Username</label></div>
-                                <div><input type="text" name="username" id="username" class="form-control"required></div>
+                                <div><input type="text" name="username" id="username" class="form-control"required placeholder="Username"></div>
                             </div>
 
                             <div class="p-2">
                                 <div class="text-start"><label for="email">Email</label></div>
-                                <div><input type="email" name="email" id="email" class="form-control"required></div>
+                                <div><input type="email" name="email" id="email" class="form-control"required placeholder="Email"></div>
 
                             </div>
 
                            
                             <div class="p-2">
                                 <div class="text-start"><label for="userimage">Userimage</label></div>
-                                <div><input type="file" name="userimage" id="userimage" class="form-control"required></div>
+                                <div><input type="file" name="userimage" id="userimage" class="form-control"required placeholder="UserImage"></div>
                             </div>
 
                             <div class="p-2">
                                 <div class="text-start"><label for="userimage">Courseid</label></div>
-                                <div><input type="text" name="courseid" id="userimage" class="form-control"required></div>
+                                
+                                <div><input type="text" name="courseid" id="userimage" class="form-control"required placeholder="Please check course page to enter a valid course id"></div>
                             </div>
 
                             <div class="p-2">
                                 <div class="text-start"><label for="password">Password</label></div>
-                                <div><input type="password" name="password" id="password" class="form-control"required></div>
+                                <div><input type="password" name="password" id="password" class="form-control"required placeholder="Password"></div>
                             </div>
 
                             <div>
@@ -130,10 +131,11 @@ if(isset($_POST['Add'])){
     $insert=mysqli_query($con,"INSERT INTO users (userid,username,email,userimage,courseid,password) VALUES('$userid','$username','$email','$filename','$courseid','$password')");
 
     if($insert && move_uploaded_file($tempname,$folder)){
-        echo "inserted";
+        echo "<script>alert('You have successfully registered with us')</script>";
+        echo "<script>window.location.assign('index.php')</script>";
     }
     else{
-        echo "not inserted";
+        echo "<script>alert('oops the register failed try again')</script>";
     }
 
 }
