@@ -134,7 +134,11 @@ if(isset($_POST['Add'])){
     $courseid=$_POST['courseid'];
     $password=$_POST['password'];
 
-    $insert=mysqli_query($con,"INSERT INTO users (userid,username,email,userimage,courseid,password) VALUES('$userid','$username','$email','$filename','$courseid','$password')");
+    //securering password
+
+    $secure_password = password_hash($password , PASSWORD_BCRYPT);
+
+    $insert=mysqli_query($con,"INSERT INTO users (userid,username,email,userimage,courseid,password) VALUES('$userid','$username','$email','$filename','$courseid','$secure_password')");
 
     if($insert && move_uploaded_file($tempname,$folder)){
         echo "<script>alert('You have successfully registered with us')</script>";

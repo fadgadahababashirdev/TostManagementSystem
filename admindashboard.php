@@ -42,12 +42,24 @@
         <li><a href="AddCourse.php">Add course</a></li>
         <li><a href="AddTrainer.php">Add Trainer</a></li>
         <li><a href="ReadUsers.php">Operations</a></li>
+        <li><a href="ReadCourse.php">EditCourse</a></li>
       </ul><br>
     </div>
     <br>
     
     <div class="col-sm-9">
       <div class="colu">
+
+      <?php
+       include_once("connectpage.php");
+
+      $select = "SELECT * FROM users";
+      $runselect =mysqli_query($con,$select);
+      $fetch =mysqli_fetch_array($runselect);
+      
+      ?>
+
+     
       <div ><img src="UserImages/<?php echo $fetch['userimage'];?>" alt=""></div>
        
       <div class="content"> <p><?php echo $fetch['username'];?></p></div>

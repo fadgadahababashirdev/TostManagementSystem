@@ -43,7 +43,7 @@
                  and individuals to come up with a great output towards there 
                  wills.join us today to explore more with us
 
-                 <div><button class=" btn btn-outline-primary "><a href="login.php"class="about" style="text-decoration:none;color:orange;background-color:white;">Join us today</a></button></div>
+                 <div><button class=" btn btn-primary "><a href="index.php"class="about" style="text-decoration:none;color:orange;background-color:white;">Join us today</a></button></div>
                 
 
             </div>

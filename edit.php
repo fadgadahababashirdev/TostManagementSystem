@@ -9,9 +9,10 @@ if(isset($_GET['Edit'])){
     $courseid=$_GET['courseid'];
     $password=$_GET['password'];
     $role=$_GET['role'];
+    $status=$_GET['status'];
 
     //update codes
-    $update=mysqli_query($con,"UPDATE users SET username='$username' , email='$email' , userimage='$userimage' , courseid='$courseid' , password='$password' , role='$role' WHERE userid='$userid'");
+    $update=mysqli_query($con,"UPDATE users SET username='$username' , email='$email' , userimage='$userimage' , courseid='$courseid' , password='$password' , role='$role' , status ='$status' WHERE userid='$userid'");
 
     if($update){
         echo "updated";

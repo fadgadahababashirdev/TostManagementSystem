@@ -1,18 +1,16 @@
 <?php
 include_once("connectpage.php");
 
-$select="SELECT *FROM users";
+$select="SELECT *FROM course";
 $runselect=mysqli_query($con,$select);
 
 error_reporting(1);
-$userid=$_GET['userid'];
-$username=$_GET['username'];
-$email=$_GET['email'];
-$userimage=$_GET['userimage'];
-$courseid=$_GET['courseid'];
-$password=$_GET['password'];
-$role=$_GET['role'];
-$status=$_GET['status'];
+$Courseid=$_GET['cid'];
+$Coursename=$_GET['cname'];
+$Courseimage=$_GET['courseimage'];
+$Coursedescription=$_GET['cdescription'];
+$Coursefile=$_GET['cfile'];
+
 ?>
 
 <!DOCTYPE html>
@@ -74,62 +72,44 @@ $status=$_GET['status'];
 
       <div class="row one">
 
-      <form action="edit.php"method="GET"enctype="multipart/form-data">
+      <form action="EditCourse.php"method="GET"enctype="multipart/form-data">
 
       
         <h1>EDIT</h1>
          
 
         <div>
-            <div><label for="userid">Userid</label></div>
-            <div><input type="text"name="userid"placeholder=""class=" form-control"required value="<?php echo $userid;?>"readonly></div>
+            <div><label for="userid">Courseid</label></div>
+            <div><input type="text"name="cid"placeholder=""class=" form-control"required value="<?php echo $Courseid;?>"readonly></div>
         </div>
 
 
         <div>
-            <div><label for="username">Username</label></div>
-            <div><input type="text"name="username"placeholder=""class="form-control pr-5"required value="<?php echo $username?>"></div>
+            <div><label for="username">Coursename</label></div>
+            <div><input type="text"name="cname"placeholder=""class="form-control pr-5"required value="<?php echo $Coursename;?>"></div>
         </div>
 
 
         <div>
-            <div><label for="Email">Email</label></div>
-            <div><input type="Email"name="email"placeholder=""class="form-control"required value="<?php echo $email;?>"></div>
+            <div><label for="Email">Courseimage</label></div>
+            <div><input type="file"name="courseimage"placeholder=""class="form-control"required value="<?php echo $Courseimage;?>"></div>
         </div>
 
 
         <div>
-            <div><label for="userimage">Userimage</label></div>
-            <div><input type="file"name="userimage"placeholder=""class="form-control"required value="<?php echo $userimage;?>"></div>
+            <div><label for="userimage">Course Description</label></div>
+            <div><input type="text"name="cdescription"placeholder=""class="form-control"required value="<?php echo $Coursedescription;?>"></div>
         </div>
 
         <div>
-            <div><label for="courseid">Courseid</label></div>
-            <div><input type="text"name="courseid"placeholder=""class="form-control"required value="<?php echo $courseid;?>"></div>
+            <div><label for="courseid">Course file</label></div>
+            <div><input type="file"name="cfile"placeholder=""class="form-control"required value="<?php echo $Coursefile;?>"></div>
         </div>
-        <div>
-            <div><label for="password">Password</label></div>
-            <div><input type="text"name="password"placeholder=""class="form-control"required value="<?php echo $password;?>"></div>
-        </div>
-        <div>
-            <div><label for="role">Role</label></div>
-            <div><input type="text"name="role"placeholder=""class="form-control"required value="<?php echo $role;?>"></div>
-        </div>
-
-        <div>
-            <div><label for="status">Status</label></div>
-            <div>
-              <select name="status"class="form-select">
-                  <option value="Approved">Pending</option>
-                  <option value="Approved">Approved</option>
-                  <option value="Approved">Rejected</option>
-            </select>
-          </div>
-        </div>
+       
 
         <div>
            
-            <div><input type="submit"name="Edit"class="form-control btn-sm btn-primary mt-3 " value="Update"></div>
+            <div><input type="submit"name="edit"class="form-control btn-sm btn-primary mt-3 " value="Update"></div>
         </div>
 
 
@@ -152,3 +132,20 @@ $status=$_GET['status'];
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

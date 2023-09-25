@@ -46,7 +46,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-    <div class="tex"><a href="admindashboard.php"style="text-decoration:none;color:black;">Tost Academy</a></div><hr>
+      <h2>Tost Academy</h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
         <li><a href="RegisterStudent.php">Add Student</a></li>
@@ -72,28 +72,27 @@
       <table class="table">
         <thead>
             <tr>
-                <th>Userid</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Userimage</th>
-                <th>Courseid</th>
-                <th>Password</th>
-                <th>Role</th>
-                <th>Status</th>
+                <th>CourseId</th>
+                <th>CourseName</th>
+                <th>CourseImage</th>
+                <th>CourseDescription</th>
+                <th>CourseFile</th>
+             
                 <th colspan="2">operations</th>
             </tr>
         </thead>
 
         <?php
-        while($row=mysqli_fetch_array($runsel)){
-            $userid=$row['userid'];
-            $username=$row['username'];
-            $email=$row['email'];
-            $userimage=$row['userimage'];
-            $courseid=$row['courseid'];
-            $password=$row['password'];
-            $role=$row['role'];
-            $status=$row['status'];
+
+        $selecto = "select *from course";
+        $runselecto = mysqli_query($con,$selecto);
+        while($row=mysqli_fetch_array($runselecto)){
+            $cid=$row['cid'];
+            $cname=$row['cname'];
+            $cimage=$row['courseimage'];
+            $cdes=$row['cdescription'];
+            $cfile=$row['cfile'];
+         
          
         
         
@@ -101,17 +100,14 @@
 
         <tbody>
             <tr>
-                <td><?php echo $userid;?></td>
-                <td><?php echo $username;?></td>
-                <td><?php echo $email;?></td>
-                <td><?php echo $userimage;?></td>
-                <td><?php echo $courseid;?></td>
-                <td><?php echo $password;?></td>
-                <td><?php echo $role;?></td>
-
-                <td><?php echo $status;?></td>
+                <td><?php echo $cid;?></td>
+                <td><?php echo $cname;?></td>
+                <td><?php echo $cimage;?></td>
+                <td><?php echo $cdes;?></td>
+                <td><?php echo $cfile;?></td>
+               
                 
-                <td><a href="editform.php? userid=<?php echo $row['userid'];?>& username=<?php echo $row['username'];?>& email=<?php echo $row['email'];?>& userimage=<?php echo  $row['userimage'];?> & courseid=<?php echo $row['courseid'];?> & password=<?php echo $row['password'];?>& role=<?php echo $row['role'];?> & status=<?php echo $row['status'];?>"class="btn rounded text-center btn-primary">Edit</a></td>
+                <td><a href="EditCourseForm.php? cid=<?php echo $row['cid'];?>& cname=<?php echo $row['cname'];?>& courseimage=<?php echo $row['courseimage'];?>& cdescription=<?php echo  $row['cdescription'];?> & cfile=<?php echo $row['cfile'];?> "class="btn rounded text-center btn-primary">Edit</a></td>
                 <td><a href=""class="btn rounded text-center btn-danger">Drop</a></td>
                
                

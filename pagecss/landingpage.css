@@ -111,6 +111,15 @@ form{
 }
 
 
+/*ul and toggle nav bar @media query*/
+
+@media(min-width:576px){
+    .tago{
+         display: hidden;
+    }
+}
+
+
 
 
 

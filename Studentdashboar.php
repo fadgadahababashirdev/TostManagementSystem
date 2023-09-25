@@ -65,7 +65,7 @@ $fetchrunsel=mysqli_fetch_array($runsel);
       <div class="colu">
           <div ><img src="UserImages/<?php echo $fetch['userimage'];?>" alt=""></div>
        
-          <div class="content"> <p><?php echo $fetch['username'];?></p></div>
+          <div class="content"> <?php echo $fetch['username'];?></p></div>
 
         <div class="content2"> <a href="logout.php">LOGOUT</a></div>
       </div>
@@ -74,7 +74,7 @@ $fetchrunsel=mysqli_fetch_array($runsel);
 
       <div class="row one">
 
-      <h1>Dear <span class="text-primary"><?php echo $fetch['username'];?></span> welcome at tost you will be learning  <span class="text-danger"><?php echo $fetchrunsel['cname'];?></span>!</h1>
+      <h1>Dear <span class="text-primary"><?php echo $fetch['username'];?></span> welcome at tost your request to study  <span class="text-danger"><?php echo $fetchrunsel['cname'];?></span>! is <span class="text-success"><?php echo $fetch['status'];?><span> </h1>
 
 
       </div>
