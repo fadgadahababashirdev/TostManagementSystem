@@ -46,7 +46,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Tost Academy</h2>
+    <div class="tex"><a href="readusers.php"style="text-decoration:none;color:black;">Tost Academy</a></div><hr>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
         <li><a href="RegisterStudent.php">Add Student</a></li>
@@ -108,7 +108,7 @@
                
                 
                 <td><a href="EditCourseForm.php? cid=<?php echo $row['cid'];?>& cname=<?php echo $row['cname'];?>& courseimage=<?php echo $row['courseimage'];?>& cdescription=<?php echo  $row['cdescription'];?> & cfile=<?php echo $row['cfile'];?> "class="btn rounded text-center btn-primary">Edit</a></td>
-                <td><a href=""class="btn rounded text-center btn-danger">Drop</a></td>
+                <td><a href="DeleteCourse.php? delete=<?php echo $row['cid'];?>"class="btn rounded text-center btn-danger">Delete</a></td>
                
                
             </tr>

@@ -46,7 +46,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-    <div class="tex"><a href="admindashboard.php"style="text-decoration:none;color:black;">Tost Academy</a></div><hr>
+         <div class="tex"><a href="admindashboard.php"style="text-decoration:none;color:black;">Tost Academy</a></div><hr>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
         <li><a href="RegisterStudent.php">Add Student</a></li>
@@ -111,8 +111,8 @@
 
                 <td><?php echo $status;?></td>
                 
-                <td><a href="editform.php? userid=<?php echo $row['userid'];?>& username=<?php echo $row['username'];?>& email=<?php echo $row['email'];?>& userimage=<?php echo  $row['userimage'];?> & courseid=<?php echo $row['courseid'];?> & password=<?php echo $row['password'];?>& role=<?php echo $row['role'];?> & status=<?php echo $row['status'];?>"class="btn rounded text-center btn-primary">Edit</a></td>
-                <td><a href=""class="btn rounded text-center btn-danger">Drop</a></td>
+                <td><a href="editform.php? userid=<?php echo $row['userid'];?> & username=<?php echo $row['username'];?>& email=<?php echo $row['email'];?>& userimage=<?php echo  $row['userimage'];?> & courseid=<?php echo $row['courseid'];?> & password=<?php echo $row['password'];?>& role=<?php echo $row['role'];?> & status=<?php echo $row['status'];?>"class="btn rounded text-center btn-primary">Edit</a></td>
+                <td><a href="delete.php ?" delete= <?php echo $row['userid'];?> class="btn rounded text-center btn-danger">Delete</a></td>
                
                
             </tr>

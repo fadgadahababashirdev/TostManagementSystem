@@ -10,27 +10,15 @@
 </head>
 <body>
     <!--nav bar-->
-            <nav class="navbar navbar-expand-sm bg-danger  p-2 fixed-top">
-                    <div class="nav-header text-white px-4">Tost Training Academy</div>
-                   <div class="navvbar">
-                   <ul class="navbar-nav">
-                        <li class="nav-item"><a href="index.php" class="nav-link text-lg text-dark active">Home</a></li>
-                        <li class="nav-item"><a href="About.php" class="nav-link text-lg text-dark">About</a></li>
-                        <li class="nav-item"><a href="contactus.html" class="nav-link text-lg text-dark">Contact</a></li>
-                        <li class="nav-item"><a href="Course.php" class="nav-link text-lg text-dark">Course</a></li>
-                      
-                    </ul>
-                   </div>
-
-                   <div class="tago"><img src="Image/download.png" alt="image not found" style="width:23px;height:23px;margin-top:px;"></div>
-
-
-            </nav>
+         <?php
+         include_once("navbar.php");
+         
+         ?>
 
   
        <div class="row">
             <!--conta class-->
-            <div class="col-sm-6 conta p-5">
+            <div class="col-sm-6 conta p-5 mt-5">
                      <span class="one">Tost Management Academy</span>
                      <br>
                     <span class="two"> We are Delighted to welcome you here on our 

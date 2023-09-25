@@ -9,7 +9,11 @@
 <body>
 
 
-         
+<?php
+    //navbar 
+    include_once("navbar.php");
+    
+    ?>
 
     <!--Section: Contact v.2-->
 <section class="mb-4">
