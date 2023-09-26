@@ -23,10 +23,12 @@
   form{
    
     background-color: azure;
-    width:230px;
+    width:560px;
     padding:12px;
+    margin-left: 100px;
 
   }
+  
 
   img{
     border-radius: 50%;

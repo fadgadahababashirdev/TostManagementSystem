@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href ="css/bootstrap.min.css">
-</head>
-<body>
 
 
 <?php
-    //navbar 
-    include_once("navbar.php");
-    
-    ?>
+include_once("navbar.php");
+
+?>
 
     <!--Section: Contact v.2-->
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4 p-5">Contact us</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4 ">Contact us</h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>

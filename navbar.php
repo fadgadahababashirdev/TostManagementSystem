@@ -21,7 +21,7 @@
                     </ul>
                    </div>
 
-                   <div class="tago"><img src="Image/download.png" alt="image not found" style="width:23px;height:23px;margin-top:px;"></div>
+                  
 
 
             </nav>

@@ -41,7 +41,7 @@
                  ?>
 
            <div class="col-sm-4 border shadow rounded text-center pt-3 pb-3"style="width:320px;margin-left:63px;">
-                    <div class="d-flex justify-content-around"><p style="color: rgb(244, 12, 116);"><?php echo $row['cname'];?></p><p>course id:<?php echo $row['cid'];?></p></div>
+                    <div class="d-flex justify-content-around"><p style="color: rgb(244, 12, 116);"><?php echo $row['cname'];?></p></p></div>
                     <div><img src="CourseImage/<?php echo $row['courseimage'];?>" alt="image not found"></div>
                     <div ><p><?php echo $row['cdescription']?></p></div>
                     <div class="text-start" style="margin-left:42px;"><a href="readfile.php ? pdffile=<?php echo $row['cid'];?>">Download course</a></div>
